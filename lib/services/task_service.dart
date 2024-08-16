@@ -1,5 +1,5 @@
 import 'package:dio/dio.dart';
-import 'package:kanban_board/network/api_config.dart';
+import '../network/api_config.dart';
 import '../network/api_services.dart';
 
 class TodoistApiService {
@@ -35,7 +35,7 @@ class TodoistApiService {
 
   Future<Response<dynamic>> getComments(String taskId) async {
     return await dioService.get(
-      '${BaseUrl.restBaseUrl}/comments?task_id=${taskId}',
+      '${BaseUrl.restBaseUrl}/comments?task_id=$taskId',
     );
   }
 
@@ -55,7 +55,7 @@ class TodoistApiService {
 
   Future<Response<dynamic>> getAllCompleteTasks(String projectId) async {
     return await dioService.get(
-      '${BaseUrl.syncBaseUrl}/completed/get_all?project_id=${projectId}',
+      '${BaseUrl.syncBaseUrl}/completed/get_all?project_id=$projectId',
     );
   }
 }

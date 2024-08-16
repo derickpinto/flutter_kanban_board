@@ -1,13 +1,12 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:kanban_board/constants/app_color.dart';
-import 'package:kanban_board/constants/app_string.dart';
-import 'package:kanban_board/service_injection.dart';
-import 'package:kanban_board/widgets/appbar_popupmenu.dart';
-import 'package:kanban_board/widgets/status_header.dart';
+import '../constants/app_color.dart';
+import '../constants/app_string.dart';
 import '../controllers/task_controller.dart';
+import '../service_injection.dart';
+import '../widgets/appbar_popupmenu.dart';
+import '../widgets/status_header.dart';
 import '../widgets/task_card.dart';
 import '../models/task.dart';
 import 'add_task_modal.dart';
@@ -15,6 +14,8 @@ import 'task_details.dart';
 
 class KanbanBoard extends StatelessWidget {
   final TaskController controller = Get.put(getIt<TaskController>());
+
+  KanbanBoard({super.key});
 
   @override
   Widget build(BuildContext context) {

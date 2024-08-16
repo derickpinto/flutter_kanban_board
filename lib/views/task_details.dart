@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:kanban_board/constants/app_color.dart';
+import '../constants/app_color.dart';
 import '../models/task.dart';
 import '../controllers/task_controller.dart';
 import '../widgets/details_screen_popup_menu.dart';

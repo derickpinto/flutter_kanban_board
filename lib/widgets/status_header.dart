@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:kanban_board/constants/app_color.dart';
-import 'package:kanban_board/constants/app_string.dart';
+
+import '../constants/app_color.dart';
+import '../constants/app_string.dart';
 
 class StatusHeader extends StatelessWidget {
   final String status;

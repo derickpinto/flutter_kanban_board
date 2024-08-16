@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:kanban_board/service_injection.dart';
-import 'package:kanban_board/views/completed_task_details.dart';
 import '../controllers/completed_task_controller.dart';
+import '../service_injection.dart';
 import '../widgets/task_card.dart';
+import 'completed_task_details.dart';
 
 class CompletedTasksScreen extends StatelessWidget {
   const CompletedTasksScreen({super.key});

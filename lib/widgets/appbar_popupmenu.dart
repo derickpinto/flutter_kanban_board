@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:kanban_board/controllers/task_controller.dart';
 
+import '../controllers/task_controller.dart';
 import '../views/completed_tasks.dart';
 
 class AppBarPopup extends StatelessWidget {

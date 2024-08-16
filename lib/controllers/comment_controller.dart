@@ -1,7 +1,8 @@
 import 'package:get/get.dart';
-import 'package:get/get_rx/get_rx.dart';
+import '../constants/app_string.dart';
 import '../models/task.dart';
 import '../services/task_service.dart';
+import '../utils/helper_functions.dart';
 
 class CommentController extends GetxController {
   final TodoistApiService apiService;
@@ -34,8 +35,7 @@ class CommentController extends GetxController {
             'Failed to fetch tasks, status code: ${response.statusCode}');
       }
     } catch (e) {
-      // Handle errors and update UI accordingly
-      print('Error fetching tasks: $e');
+      showToast("Something went wrong");
     }
   }
 
@@ -60,7 +60,7 @@ class CommentController extends GetxController {
       }
     } catch (e) {
       // Handle errors and update UI accordingly
-      print('Error fetching tasks: $e');
+      showToast(AppString.warning);
     }
   }
 }

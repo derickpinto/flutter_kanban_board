@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:kanban_board/service_injection.dart';
 import '../controllers/comment_controller.dart';
 import '../models/task.dart';
+import '../service_injection.dart';
 import '../services/task_service.dart';
 
 class CommentSection extends StatelessWidget {

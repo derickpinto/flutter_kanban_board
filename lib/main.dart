@@ -5,5 +5,5 @@ import 'service_injection.dart';
 void main() async{
   WidgetsFlutterBinding.ensureInitialized();
   setupDependencies();
-  runApp(MyApp());
+  runApp(const MyApp());
 }

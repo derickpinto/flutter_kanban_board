@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:kanban_board/constants/app_color.dart';
-import 'package:kanban_board/controllers/completed_task_controller.dart';
+import '../constants/app_color.dart';
+import '../controllers/completed_task_controller.dart';
 import '../models/task.dart';
 import 'comment_section.dart';
 

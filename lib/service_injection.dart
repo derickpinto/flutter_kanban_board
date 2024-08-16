@@ -1,6 +1,6 @@
 import 'package:get_it/get_it.dart';
-import 'package:kanban_board/controllers/completed_task_controller.dart';
 
+import 'controllers/completed_task_controller.dart';
 import 'controllers/task_controller.dart';
 import 'network/api_services.dart';
 import 'services/task_service.dart';

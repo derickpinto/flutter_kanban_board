@@ -1,18 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:kanban_board/constants/app_string.dart';
-import 'package:kanban_board/utils/helper_functions.dart';
+import '../constants/app_string.dart';
 import '../controllers/task_controller.dart';
 import '../models/task.dart';
+import '../utils/helper_functions.dart';
+
 
 class TaskModal extends StatefulWidget {
   final Task? task;
 
-  const TaskModal({Key? key, this.task}) : super(key: key);
+  const TaskModal({super.key, this.task});
 
   @override
-  _TaskModalState createState() => _TaskModalState();
+  State<TaskModal> createState() => _TaskModalState();
 }
 
 class _TaskModalState extends State<TaskModal> {

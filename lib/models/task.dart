@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:kanban_board/constants/app_color.dart';
+
+import '../constants/app_color.dart';
 
 class Task {
   String id;

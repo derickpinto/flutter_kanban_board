@@ -1,5 +1,6 @@
 import 'package:get/get.dart';
 import 'package:uuid/uuid.dart';
+import '../constants/app_string.dart';
 import '../models/task.dart';
 import '../service_injection.dart';
 import '../services/task_service.dart';
@@ -43,7 +44,7 @@ class TaskController extends GetxController {
             'Failed to fetch tasks, status code: ${response.statusCode}');
       }
     } catch (e) {
-      print('Error fetching tasks: $e');
+      showToast(AppString.warning);
     }
   }
 
@@ -66,7 +67,6 @@ class TaskController extends GetxController {
         return false;
       }
     } catch (e) {
-      print('Error adding task: $e');
       return false;
     }
   }
@@ -233,7 +233,7 @@ class TaskController extends GetxController {
     return task;
   }
 
-  int getTaskCountOfSection(section){
+  int getTaskCountOfSection(section) {
     return tasks.where((task) => task.status == section).length;
   }
 }
