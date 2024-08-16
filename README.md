@@ -18,8 +18,7 @@ This Kanban board application is built with Flutter, providing users with a visu
 - **Flutter:** For building the cross-platform mobile application.
 - **GetX:** For state management and dependency injection.
 - **Google Fonts:** For custom text styling.
-- **Dio:** For network requests (if used for API interactions).
-- **Hive:** For local storage (if used).
+- **Dio:** For network requests.
 
 ## Getting Started
 
@@ -33,8 +32,8 @@ This Kanban board application is built with Flutter, providing users with a visu
 1. Clone the repository:
 
     ```bash
-    git clone https://github.com/yourusername/kanban_board.git
-    cd kanban_board
+    git clone https://github.com/derickpinto/flutter_kanban_board.git
+    cd flutter_kanban_board
     ```
 
 2. Install dependencies:
@@ -46,7 +45,7 @@ This Kanban board application is built with Flutter, providing users with a visu
 3. Run the app:
 
     ```bash
-    flutter run
+    flutter run  --dart-define-from-file=.env
     ```
 
 ## Usage
@@ -83,12 +82,8 @@ This Kanban board application is built with Flutter, providing users with a visu
 - `flutter`
 - `get`
 - `google_fonts`
-- (Additional dependencies if any)
+- `getIt`
 
 ## Contributing
 
 Feel free to submit issues or pull requests. Please ensure to follow the coding standards and write clear commit messages.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
