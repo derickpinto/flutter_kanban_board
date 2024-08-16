@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:kanban_board/utils/routes.dart';
 import '../controllers/completed_task_controller.dart';
 import '../service_injection.dart';
 import '../widgets/task_card.dart';
-import 'completed_task_details.dart';
 
 class CompletedTasksScreen extends StatelessWidget {
   const CompletedTasksScreen({super.key});
@@ -37,7 +37,7 @@ class CompletedTasksScreen extends StatelessWidget {
                         padding: const EdgeInsets.only(bottom: 12.0),
                         child: GestureDetector(
                           onTap: () {
-                            Get.to(() => CompletedTaskDetails(task: task));
+                            Get.toNamed(AppRoutes.completeTaskDetails,arguments: task);
                           },
                           child: TaskCard(task: task),
                         ),

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:kanban_board/utils/routes.dart';
 import '../constants/app_color.dart';
 import '../constants/app_string.dart';
 import '../controllers/task_controller.dart';
@@ -10,12 +11,11 @@ import '../widgets/status_header.dart';
 import '../widgets/task_card.dart';
 import '../models/task.dart';
 import 'add_task_modal.dart';
-import 'task_details.dart';
 
 class KanbanBoard extends StatelessWidget {
-  final TaskController controller = Get.put(getIt<TaskController>());
-
   KanbanBoard({super.key});
+
+  final TaskController controller = Get.put(getIt<TaskController>());
 
   @override
   Widget build(BuildContext context) {
@@ -34,9 +34,9 @@ class KanbanBoard extends StatelessWidget {
         scrollDirection: Axis.horizontal,
         child: Row(
           children: [
-            _buildTaskColumn(AppString.todoState, Colors.blue),
-            _buildTaskColumn(AppString.inProgressState, Colors.orange),
-            _buildTaskColumn(AppString.doneState, Colors.green),
+            _buildTaskColumn(AppString.todoState,Colors.orange, context),
+            _buildTaskColumn(AppString.inProgressState,  Colors.blue, context),
+            _buildTaskColumn(AppString.doneState, Colors.green, context),
           ],
         ),
       ),
@@ -55,9 +55,9 @@ class KanbanBoard extends StatelessWidget {
     );
   }
 
-  Widget _buildTaskColumn(String status, Color color) {
+  Widget _buildTaskColumn(String status, Color color, BuildContext context) {
     return Container(
-      width: Get.width - 100,
+      width: MediaQuery.of(context).size.width - 100,
       padding: const EdgeInsets.all(12.0),
       color: color.withOpacity(0.1),
       child: Column(
@@ -96,9 +96,10 @@ class KanbanBoard extends StatelessWidget {
                           ),
                         ),
                         childWhenDragging: Container(),
+                        // Consider updating this if needed
                         child: GestureDetector(
                           onTap: () {
-                            Get.to(() => TaskDetails(task: task));
+                            Get.toNamed(AppRoutes.taskDetails, arguments: task);
                           },
                           child: Padding(
                             padding: const EdgeInsets.only(bottom: 16.0),

@@ -1,5 +1,4 @@
 import 'package:dio/dio.dart';
-import 'package:flutter/foundation.dart';
 
 import 'pretty_print.dart';
 
@@ -13,12 +12,11 @@ class DioService {
             validateStatus: (_) => true,
           ),
         ) {
-    if (kDebugMode) {
       dio.interceptors.add(PrettyDioLogger(
         request: true,
         requestBody: true,
+        requestHeader: true,
       ));
-    }
   }
 
   Future<Response> get(String endpoint) async {

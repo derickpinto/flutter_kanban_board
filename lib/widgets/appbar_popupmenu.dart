@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:kanban_board/utils/routes.dart';
 
 import '../controllers/task_controller.dart';
-import '../views/completed_tasks.dart';
 
 class AppBarPopup extends StatelessWidget {
   const AppBarPopup({super.key});
@@ -17,7 +17,7 @@ class AppBarPopup extends StatelessWidget {
             controller.fetchTasks();
             break;
           case 'History':
-            Get.to(() => const CompletedTasksScreen());
+            Get.toNamed(AppRoutes.completeTaskListing);
             break;
           default:
             break;
